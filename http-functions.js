@@ -15,7 +15,7 @@ function getHTML(options, callback) {
     });
     //response on error
     response.on('error', (error) => {
-      console.log("Error: " + error);
+      return error;
     });
     //response on end
     response.on('end', () => {
@@ -24,4 +24,4 @@ function getHTML(options, callback) {
   });
 }
 
-module.exports = {getHTML: getHTML};
+module.exports = getHTML;
